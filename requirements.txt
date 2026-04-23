@@ -1,5 +1,0 @@
-1. What exact problem are we solving first?
-2. Which use case has highest priority?
-3. Who is the primary user ?
-4. Do you need only the prototype or the final product as well?
-5. What about the Dataset?
