@@ -1,0 +1,9 @@
+1. What exact problem are we solving first?
+2. Which use case has highest priority?
+3. Who is the primary user ?
+4. Do you need only the prototype or the final product as well?
+5. What about the Dataset?
+6. where can we find the documents? 
+7. what type of output expected for different agents? 
+8. what will be the source of Input? 
+9. Everyone should have access to all the agents or specific type of people will have access to specific agents?
