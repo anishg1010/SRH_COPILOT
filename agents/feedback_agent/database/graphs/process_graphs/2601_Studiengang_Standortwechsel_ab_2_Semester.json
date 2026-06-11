@@ -1,0 +1,392 @@
+{
+  "graph_id": "program_campus_change_after_second_semester_graph",
+  "process_name_de": "Studiengangs-/Standortwechsel ab dem 2. Semester",
+  "process_name_en": "Change of Study Programme / Campus from the 2nd Semester",
+  "collection": "student_service",
+  "agent": "student_service_agent",
+  "category": "process_graph",
+  "source_png": "2601_Studiengang_Standortwechsel_ab_2_Sem.png",
+  "source_pdf": "2601_Studiengang_Standortwechsel_ab_2_Semester.pdf",
+  "language": "de",
+  "version": "2026-01",
+  "department": "Student Service",
+
+  "nodes": [
+    {
+      "id": "input",
+      "type": "input",
+      "actor": "Student",
+      "action": "Application for study programme or campus change and transcript of records are available"
+    },
+    {
+      "id": "01",
+      "type": "process_step",
+      "actor": "Student",
+      "action": "Submit application for study programme or campus change",
+      "deadline": "28.02 for summer semester, 31.08 for winter semester",
+      "required_documents": "Application form"
+    },
+    {
+      "id": "02",
+      "type": "process_step",
+      "actor": "Student Service",
+      "action": "After formal check, forward the application to the future programme director",
+      "deadline": "Immediately",
+      "required_documents": "Application"
+    },
+    {
+      "id": "03",
+      "type": "process_step",
+      "actor": "Future Programme Director",
+      "action": "Check whether the change is possible, whether the desired cohort is offered, and whether module transfer or recognition of achievements is required",
+      "deadline": "Maximum 2 working days"
+    },
+    {
+      "id": "D01",
+      "type": "decision",
+      "actor": "Future Programme Director",
+      "question": "Is the change possible?"
+    },
+    {
+      "id": "04a",
+      "type": "process_step",
+      "actor": "Future Programme Director",
+      "action": "Reject the application with a reason and forward it to Student Service",
+      "deadline": "Immediately"
+    },
+    {
+      "id": "04b",
+      "type": "process_step",
+      "actor": "Student Service",
+      "action": "Inform the student about the rejection, including the reason, and file the application",
+      "recipient": "Student"
+    },
+    {
+      "id": "D02",
+      "type": "decision",
+      "actor": "Future Programme Director",
+      "question": "Is recognition of achievements required?"
+    },
+    {
+      "id": "05",
+      "type": "process_step",
+      "actor": "Future Programme Director",
+      "action": "For module transfer: enter the future cohort or continuation of study and forward the application to Student Service",
+      "deadline": "Maximum 5 working days"
+    },
+    {
+      "id": "06",
+      "type": "process_step",
+      "actor": "Future Programme Director",
+      "action": "For recognition of achievements: enter recognized modules in the table",
+      "deadline": "Maximum 5 working days"
+    },
+    {
+      "id": "07",
+      "type": "process_step",
+      "actor": "Future Programme Director",
+      "action": "Enter the future cohort or continuation of study after recognition and forward the application to the Examination Office"
+    },
+    {
+      "id": "08",
+      "type": "process_step",
+      "actor": "Examination Office",
+      "action": "After completing the recognition process, forward the application to Student Service"
+    },
+    {
+      "id": "09",
+      "type": "process_step",
+      "actor": "Student Service",
+      "action": "Ask Admission about admission possibility and additional agreement",
+      "deadline": "Immediately"
+    },
+    {
+      "id": "10",
+      "type": "process_step",
+      "actor": "Admission",
+      "action": "Clarify admission requirements",
+      "deadline": "Maximum 2 working days"
+    },
+    {
+      "id": "D03",
+      "type": "decision",
+      "actor": "Admission",
+      "question": "Are the admission requirements fulfilled?"
+    },
+    {
+      "id": "11a",
+      "type": "process_step",
+      "actor": "Admission",
+      "action": "If admission requirements are not fulfilled, reject the application and inform Student Service",
+      "deadline": "After check"
+    },
+    {
+      "id": "11b",
+      "type": "process_step",
+      "actor": "Student Service",
+      "action": "Inform the student about the rejection, including the reason, and file the application",
+      "deadline": "Immediately"
+    },
+    {
+      "id": "12",
+      "type": "process_step",
+      "actor": "Admission",
+      "action": "If admission requirements are fulfilled, create the additional agreement with recognition of achievements and new fees, and send it to Student Service",
+      "deadline": "Maximum 1 working day",
+      "required_documents": "Additional agreement template"
+    },
+    {
+      "id": "13",
+      "type": "process_step",
+      "actor": "Student Service",
+      "action": "Send the additional agreement to the student for signature",
+      "deadline": "Immediately",
+      "required_documents": "Additional agreement"
+    },
+    {
+      "id": "14",
+      "type": "process_step",
+      "actor": "Student",
+      "action": "Sign the additional agreement and send it back to Student Service",
+      "deadline": "Maximum 2 working days"
+    },
+    {
+      "id": "15",
+      "type": "process_step",
+      "actor": "Student Service",
+      "action": "Confirm receipt and inform the student about the change at the next possible date",
+      "deadline": "Immediately"
+    },
+    {
+      "id": "16",
+      "type": "process_step",
+      "actor": "Student Service",
+      "action": "File the signed additional agreement",
+      "deadline": "Immediately",
+      "required_documents": "Signed additional agreement"
+    },
+    {
+      "id": "17",
+      "type": "process_step",
+      "actor": "Student Service",
+      "action": "Book the new study programme and deactivate the old study programme",
+      "deadline": "After semester end"
+    },
+    {
+      "id": "18",
+      "type": "process_step",
+      "actor": "Student Service",
+      "action": "Inform Fee Management and LVM about the change, including the newly assigned cohort. For campus change, inform services at the destination campus",
+      "deadline": "Immediately after change"
+    },
+    {
+      "id": "19",
+      "type": "process_step",
+      "actor": "LVM",
+      "action": "Change the planning group and inform the Examination Office",
+      "deadline": "Before semester start"
+    },
+    {
+      "id": "20",
+      "type": "process_step",
+      "actor": "Examination Office",
+      "action": "Complete the recognition of achievements",
+      "deadline": "After planning group change"
+    },
+    {
+      "id": "21",
+      "type": "process_step",
+      "actor": "Fee Management",
+      "action": "Adjust fees so that the correct cost center is used; cancel old fees and set new fees",
+      "deadline": "Before semester start"
+    },
+    {
+      "id": "22",
+      "type": "process_step",
+      "actor": "Fee Management",
+      "action": "Inform the student about the new fee collection and any changed fees, and file the application",
+      "deadline": "After fee adjustment"
+    },
+    {
+      "id": "end_rejected_sgl",
+      "type": "end",
+      "actor": "Student Service",
+      "action": "Process ends because the future programme director rejected the change"
+    },
+    {
+      "id": "end_rejected_admission",
+      "type": "end",
+      "actor": "Student Service",
+      "action": "Process ends because admission requirements are not fulfilled"
+    },
+    {
+      "id": "output",
+      "type": "output",
+      "actor": "Student Service",
+      "action": "Completed application, signed additional agreement, and updated study programme or campus data"
+    }
+  ],
+
+  "edges": [
+    {
+      "from": "input",
+      "to": "01",
+      "condition": "Student wants to change study programme or campus from the 2nd semester"
+    },
+    {
+      "from": "01",
+      "to": "02",
+      "condition": "Application submitted"
+    },
+    {
+      "from": "02",
+      "to": "03",
+      "condition": "Application formally checked and forwarded"
+    },
+    {
+      "from": "03",
+      "to": "D01",
+      "condition": "Future programme director completed initial check"
+    },
+    {
+      "from": "D01",
+      "to": "04a",
+      "condition": "No - change is not possible"
+    },
+    {
+      "from": "04a",
+      "to": "04b",
+      "condition": "Rejected application forwarded to Student Service"
+    },
+    {
+      "from": "04b",
+      "to": "end_rejected_sgl",
+      "condition": "Student informed and application filed"
+    },
+    {
+      "from": "D01",
+      "to": "D02",
+      "condition": "Yes - change is possible"
+    },
+    {
+      "from": "D02",
+      "to": "05",
+      "condition": "No - recognition of achievements is not required; module transfer path"
+    },
+    {
+      "from": "05",
+      "to": "09",
+      "condition": "Future cohort or continuation entered and forwarded to Student Service"
+    },
+    {
+      "from": "D02",
+      "to": "06",
+      "condition": "Yes - recognition of achievements is required"
+    },
+    {
+      "from": "06",
+      "to": "07",
+      "condition": "Recognized modules entered"
+    },
+    {
+      "from": "07",
+      "to": "08",
+      "condition": "Application forwarded to Examination Office"
+    },
+    {
+      "from": "08",
+      "to": "09",
+      "condition": "Recognition process completed and application forwarded to Student Service"
+    },
+    {
+      "from": "09",
+      "to": "10",
+      "condition": "Student Service asks Admission"
+    },
+    {
+      "from": "10",
+      "to": "D03",
+      "condition": "Admission requirements checked"
+    },
+    {
+      "from": "D03",
+      "to": "11a",
+      "condition": "No - admission requirements are not fulfilled"
+    },
+    {
+      "from": "11a",
+      "to": "11b",
+      "condition": "Student Service informed about rejection"
+    },
+    {
+      "from": "11b",
+      "to": "end_rejected_admission",
+      "condition": "Student informed and application filed"
+    },
+    {
+      "from": "D03",
+      "to": "12",
+      "condition": "Yes - admission requirements are fulfilled"
+    },
+    {
+      "from": "12",
+      "to": "13",
+      "condition": "Additional agreement created and sent to Student Service"
+    },
+    {
+      "from": "13",
+      "to": "14",
+      "condition": "Additional agreement sent to student"
+    },
+    {
+      "from": "14",
+      "to": "15",
+      "condition": "Student returns signed additional agreement"
+    },
+    {
+      "from": "15",
+      "to": "16",
+      "condition": "Receipt confirmed and student informed"
+    },
+    {
+      "from": "16",
+      "to": "17",
+      "condition": "Signed agreement filed"
+    },
+    {
+      "from": "17",
+      "to": "18",
+      "condition": "New study programme booked and old study programme deactivated"
+    },
+    {
+      "from": "18",
+      "to": "19",
+      "condition": "LVM must change planning group"
+    },
+    {
+      "from": "19",
+      "to": "20",
+      "condition": "Examination Office informed"
+    },
+    {
+      "from": "20",
+      "to": "21",
+      "condition": "Recognition of achievements completed"
+    },
+    {
+      "from": "18",
+      "to": "21",
+      "condition": "Fee Management must adjust fees"
+    },
+    {
+      "from": "21",
+      "to": "22",
+      "condition": "Fees adjusted"
+    },
+    {
+      "from": "22",
+      "to": "output",
+      "condition": "Student informed about fees and application filed"
+    }
+  ]
+}

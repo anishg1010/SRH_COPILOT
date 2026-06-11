@@ -1,0 +1,37 @@
+{
+  "2601_Beurlaubung.png": {
+    "collection": "student_service",
+    "agent": "student_service_agent",
+    "category": "process_diagram",
+    "doc_type": "process_flowchart",
+    "language": "de",
+    "version": "2026-01",
+    "department": "Student Service",
+    "related_pdf": "2601_Beurlaubung.pdf",
+    "graph_file": "2601_Beurlaubung_graph.json"
+  },
+
+  "2601_Studiengang_Standortwechsel_ab_2_Sem.png": {
+    "collection": "student_service",
+    "agent": "student_service_agent",
+    "category": "process_diagram",
+    "doc_type": "process_flowchart",
+    "language": "de",
+    "version": "2026-01",
+    "department": "Student Service",
+    "related_pdf": "2601_Studiengang_Standortwechsel_ab_2_Semester.pdf",
+    "graph_file": "2601_Studiengang_Standortwechsel_ab_2_Semester.json"
+  },
+
+  "2601_Studiengang_Standortwechsel_Studienstart.png": {
+    "collection": "student_service",
+    "agent": "student_service_agent",
+    "category": "process_diagram",
+    "doc_type": "process_flowchart",
+    "language": "de",
+    "version": "2026-01",
+    "department": "Student Service",
+    "related_pdf": "2601_Studiengang_Standortwechsel_Studienstart.pdf",
+    "graph_file": "2601_Studiengang_Standortwechsel_Studienstart.json"
+  }
+}

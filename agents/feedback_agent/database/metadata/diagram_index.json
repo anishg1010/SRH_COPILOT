@@ -1,0 +1,44 @@
+[
+    {
+        "source_file": "2601_Beurlaubung.png",
+        "image_path": "C:\\Users\\yuvra\\Desktop\\UNI\\Collabortive industry project\\Main\\agents\\feedback_agent\\database\\Images\\Process_diagrams\\2601_Beurlaubung.png",
+        "collection": "student_service",
+        "agent": "student_service_agent",
+        "category": "process_diagram",
+        "doc_type": "process_flowchart",
+        "language": "de",
+        "version": "2026-01",
+        "department": "Student Service",
+        "related_pdf": "2601_Beurlaubung.pdf",
+        "graph_file": "2601_Beurlaubung_graph.json",
+        "graph_path": "C:\\Users\\yuvra\\Desktop\\UNI\\Collabortive industry project\\Main\\agents\\feedback_agent\\database\\graphs\\process_graphs\\2601_Beurlaubung_graph.json"
+    },
+    {
+        "source_file": "2601_Studiengang_Standortwechsel_ab_2_Sem.png",
+        "image_path": "C:\\Users\\yuvra\\Desktop\\UNI\\Collabortive industry project\\Main\\agents\\feedback_agent\\database\\Images\\Process_diagrams\\2601_Studiengang_Standortwechsel_ab_2_Sem.png",
+        "collection": "student_service",
+        "agent": "student_service_agent",
+        "category": "process_diagram",
+        "doc_type": "process_flowchart",
+        "language": "de",
+        "version": "2026-01",
+        "department": "Student Service",
+        "related_pdf": "2601_Studiengang_Standortwechsel_ab_2_Semester.pdf",
+        "graph_file": "2601_Studiengang_Standortwechsel_ab_2_Semester.json",
+        "graph_path": "C:\\Users\\yuvra\\Desktop\\UNI\\Collabortive industry project\\Main\\agents\\feedback_agent\\database\\graphs\\process_graphs\\2601_Studiengang_Standortwechsel_ab_2_Semester.json"
+    },
+    {
+        "source_file": "2601_Studiengang_Standortwechsel_Studienstart.png",
+        "image_path": "C:\\Users\\yuvra\\Desktop\\UNI\\Collabortive industry project\\Main\\agents\\feedback_agent\\database\\Images\\Process_diagrams\\2601_Studiengang_Standortwechsel_Studienstart.png",
+        "collection": "student_service",
+        "agent": "student_service_agent",
+        "category": "process_diagram",
+        "doc_type": "process_flowchart",
+        "language": "de",
+        "version": "2026-01",
+        "department": "Student Service",
+        "related_pdf": "2601_Studiengang_Standortwechsel_Studienstart.pdf",
+        "graph_file": "2601_Studiengang_Standortwechsel_Studienstart.json",
+        "graph_path": "C:\\Users\\yuvra\\Desktop\\UNI\\Collabortive industry project\\Main\\agents\\feedback_agent\\database\\graphs\\process_graphs\\2601_Studiengang_Standortwechsel_Studienstart.json"
+    }
+]

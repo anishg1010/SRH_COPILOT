@@ -1,0 +1,277 @@
+{
+  "graph_id": "program_campus_change_study_start_graph",
+  "process_name_de": "Studiengangs-/Standortwechsel bei Studienstart",
+  "process_name_en": "Change of Study Programme / Campus at Study Start",
+  "collection": "student_service",
+  "agent": "student_service_agent",
+  "category": "process_graph",
+  "source_png": "2601_Studiengang_Standortwechsel_Studienstart.png",
+  "source_pdf": "2601_Studiengang_Standortwechsel_Studienstart.pdf",
+  "language": "de",
+  "version": "2026-01",
+  "department": "Student Service",
+
+  "nodes": [
+    {
+      "id": "input",
+      "type": "input",
+      "actor": "Student",
+      "action": "Written informal request for study programme or campus change"
+    },
+    {
+      "id": "01",
+      "type": "process_step",
+      "actor": "Student",
+      "action": "Submit informal request for change of study programme or campus",
+      "deadline": "30.04 for summer semester, 31.10 for winter semester"
+    },
+    {
+      "id": "02",
+      "type": "process_step",
+      "actor": "Student Service",
+      "action": "Forward the request to Admission",
+      "deadline": "Immediately"
+    },
+    {
+      "id": "03",
+      "type": "process_step",
+      "actor": "Admission",
+      "action": "Check whether the change is possible, including admission requirements and whether the study programme is offered",
+      "deadline": "Maximum 2 working days after request"
+    },
+    {
+      "id": "D01",
+      "type": "decision",
+      "actor": "Admission",
+      "question": "Is the change possible?"
+    },
+    {
+      "id": "04a",
+      "type": "process_step",
+      "actor": "Admission",
+      "action": "Inform the student that the change is rejected and keep Student Service in CC",
+      "deadline": "Maximum 2 working days after request"
+    },
+    {
+      "id": "04b",
+      "type": "process_step",
+      "actor": "Admission",
+      "action": "Send an additional agreement to the student retroactively to the semester start",
+      "deadline": "Maximum 2 working days after request",
+      "required_documents": "Additional agreement template"
+    },
+    {
+      "id": "05",
+      "type": "process_step",
+      "actor": "Student",
+      "action": "Sign the additional agreement and send it back to Admission",
+      "deadline": "Within 2 working days"
+    },
+    {
+      "id": "06",
+      "type": "process_step",
+      "actor": "Admission",
+      "action": "Confirm receipt of the additional agreement and inform the student about the next possible system change",
+      "deadline": "Immediately"
+    },
+    {
+      "id": "07",
+      "type": "process_step",
+      "actor": "Admission",
+      "action": "Change the data in DreamApply and store the additional agreement",
+      "deadline": "Immediately"
+    },
+    {
+      "id": "08",
+      "type": "process_step",
+      "actor": "Admission",
+      "action": "Inform Student Service about the successful change",
+      "deadline": "After change"
+    },
+    {
+      "id": "D02",
+      "type": "decision",
+      "actor": "Student Service",
+      "question": "Has the student's data already been imported into AC5?"
+    },
+    {
+      "id": "09",
+      "type": "process_step",
+      "actor": "Student Service",
+      "action": "If data was already imported into AC5, deactivate the old study programme after the new import",
+      "deadline": "After creation of the new study programme"
+    },
+    {
+      "id": "10",
+      "type": "process_step",
+      "actor": "Student Service",
+      "action": "Inform Fee Management and LVM about the change, including the newly assigned cohort. For campus change, inform services at the destination campus"
+    },
+    {
+      "id": "11",
+      "type": "process_step",
+      "actor": "Fee Management",
+      "action": "Adjust fees so that the correct cost center is used; cancel old fees and set new fees",
+      "deadline": "Immediately"
+    },
+    {
+      "id": "12",
+      "type": "process_step",
+      "actor": "Fee Management",
+      "action": "Inform the student about the new fee collection and any changed fees",
+      "deadline": "After fee adjustment"
+    },
+    {
+      "id": "13",
+      "type": "process_step",
+      "actor": "LVM",
+      "action": "Change the planning group",
+      "deadline": "Immediately"
+    },
+    {
+      "id": "14",
+      "type": "process_step",
+      "actor": "LVM",
+      "action": "Inform the Examination Office about the change",
+      "deadline": "After change"
+    },
+    {
+      "id": "15",
+      "type": "process_step",
+      "actor": "Examination Office",
+      "action": "Deregister the student from exams in the old study programme and register the student for exams in the new study programme",
+      "deadline": "Immediately"
+    },
+    {
+      "id": "end_rejected",
+      "type": "end",
+      "actor": "Admission",
+      "action": "Process ends because the change is not possible"
+    },
+    {
+      "id": "end_no_ac5_action",
+      "type": "end",
+      "actor": "Student Service",
+      "action": "Process ends without AC5 deactivation because data was not yet imported"
+    },
+    {
+      "id": "output",
+      "type": "output",
+      "actor": "Student Service",
+      "action": "Signed additional agreement and updated study programme or campus data"
+    }
+  ],
+
+  "edges": [
+    {
+      "from": "input",
+      "to": "01",
+      "condition": "Student wants to change study programme or campus at study start"
+    },
+    {
+      "from": "01",
+      "to": "02",
+      "condition": "Informal request submitted"
+    },
+    {
+      "from": "02",
+      "to": "03",
+      "condition": "Request forwarded to Admission"
+    },
+    {
+      "from": "03",
+      "to": "D01",
+      "condition": "Admission check completed"
+    },
+    {
+      "from": "D01",
+      "to": "04a",
+      "condition": "No - change is not possible"
+    },
+    {
+      "from": "04a",
+      "to": "end_rejected",
+      "condition": "Student and Student Service have been informed"
+    },
+    {
+      "from": "D01",
+      "to": "04b",
+      "condition": "Yes - change is possible"
+    },
+    {
+      "from": "04b",
+      "to": "05",
+      "condition": "Additional agreement sent to student"
+    },
+    {
+      "from": "05",
+      "to": "06",
+      "condition": "Signed additional agreement returned to Admission"
+    },
+    {
+      "from": "06",
+      "to": "07",
+      "condition": "Receipt confirmed"
+    },
+    {
+      "from": "07",
+      "to": "08",
+      "condition": "DreamApply data changed and agreement stored"
+    },
+    {
+      "from": "08",
+      "to": "D02",
+      "condition": "Student Service informed about successful change"
+    },
+    {
+      "from": "D02",
+      "to": "end_no_ac5_action",
+      "condition": "No - data has not yet been imported into AC5"
+    },
+    {
+      "from": "D02",
+      "to": "09",
+      "condition": "Yes - data has already been imported into AC5"
+    },
+    {
+      "from": "09",
+      "to": "10",
+      "condition": "Old study programme deactivated after new import"
+    },
+    {
+      "from": "10",
+      "to": "11",
+      "condition": "Fee Management must adjust fees"
+    },
+    {
+      "from": "11",
+      "to": "12",
+      "condition": "Fees adjusted"
+    },
+    {
+      "from": "10",
+      "to": "13",
+      "condition": "LVM must update planning group"
+    },
+    {
+      "from": "13",
+      "to": "14",
+      "condition": "Planning group changed"
+    },
+    {
+      "from": "14",
+      "to": "15",
+      "condition": "Examination Office informed"
+    },
+    {
+      "from": "12",
+      "to": "output",
+      "condition": "Student informed about fee change"
+    },
+    {
+      "from": "15",
+      "to": "output",
+      "condition": "Exam registrations updated"
+    }
+  ]
+}

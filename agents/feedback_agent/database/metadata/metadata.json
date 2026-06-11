@@ -1,0 +1,61 @@
+{
+  "2601_Beurlaubung.pdf": {
+    "collection": "student_service",
+    "agent": "student_service_agent",
+    "category": "process",
+    "doc_type": "process_document",
+    "language": "de",
+    "version": "2026-01",
+    "department": "Student Service"
+  },
+
+  "2601_Studiengang_Standortwechsel_ab_2_Semester.pdf": {
+    "collection": "student_service",
+    "agent": "student_service_agent",
+    "category": "process",
+    "doc_type": "process_document",
+    "language": "de",
+    "version": "2026-01",
+    "department": "Student Service"
+  },
+
+  "2601_Studiengang_Standortwechsel_Studienstart.pdf": {
+    "collection": "student_service",
+    "agent": "student_service_agent",
+    "category": "process",
+    "doc_type": "process_document",
+    "language": "de",
+    "version": "2026-01",
+    "department": "Student Service"
+  },
+
+  "260331_FAQ_Avaya Hotline_StS.pdf": {
+    "collection": "student_service",
+    "agent": "student_service_agent",
+    "category": "faq",
+    "doc_type": "faq_document",
+    "language": "de",
+    "version": "2026-03-31",
+    "department": "Student Service"
+  },
+
+  "260410_AC5 Handbuch – Anleitungen Studierendenservice.pdf": {
+    "collection": "student_service",
+    "agent": "student_service_agent",
+    "category": "system_manual",
+    "doc_type": "internal_manual",
+    "language": "de",
+    "version": "2026-04-10",
+    "department": "Student Service"
+  },
+
+  "240205 Leitbild für Lehren und Lernen 2024 final.pdf": {
+    "collection": "student_service",
+    "agent": "teaching_bot, student_service",
+    "category": "policy",
+    "doc_type": "policy_document",
+    "language": "de",
+    "version": "2024-01-29",
+    "department": "Teaching and Learning"
+  }
+}

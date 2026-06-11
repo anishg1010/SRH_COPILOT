@@ -1,0 +1,253 @@
+{
+  "graph_id": "beurlaubung_process_graph",
+  "process_name_de": "Beurlaubung",
+  "process_name_en": "Academic Leave",
+  "collection": "student_service",
+  "agent": "student_service_agent",
+  "category": "process_graph",
+  "source_png": "2601_Beurlaubung.png",
+  "source_pdf": "2601_Beurlaubung.pdf",
+  "language": "de",
+  "version": "2026-01",
+  "department": "Student Service",
+
+  "nodes": [
+    {
+      "id": "input",
+      "type": "input",
+      "actor": "Student",
+      "action": "Application for academic leave and supporting proof are available"
+    },
+    {
+      "id": "01",
+      "type": "process_step",
+      "actor": "Student",
+      "action": "Submit official application for academic leave and supporting proof",
+      "deadline": "01.03 for summer semester, 01.09 for winter semester",
+      "required_documents": "Application and proof"
+    },
+    {
+      "id": "02",
+      "type": "process_step",
+      "actor": "Student Service",
+      "action": "Formally check the application",
+      "deadline": "Maximum 2 working days"
+    },
+    {
+      "id": "D01",
+      "type": "decision",
+      "actor": "Student Service",
+      "question": "Are the supporting documents/proofs correct and complete?"
+    },
+    {
+      "id": "03a",
+      "type": "process_step",
+      "actor": "Student Service",
+      "action": "Request additional information or contact the student if proof is incorrect or incomplete"
+    },
+    {
+      "id": "03b",
+      "type": "process_step",
+      "actor": "Student",
+      "action": "Revise the application and submit it again",
+      "required_documents": "Corrected application and proof"
+    },
+    {
+      "id": "D02",
+      "type": "decision",
+      "actor": "Student Service",
+      "question": "Is the academic leave application approved?"
+    },
+    {
+      "id": "04",
+      "type": "process_step",
+      "actor": "Student Service",
+      "action": "Inform the student that the application is rejected because the reason is not valid or not proven"
+    },
+    {
+      "id": "05",
+      "type": "process_step",
+      "actor": "Student Service",
+      "action": "Record the academic leave semester in the system / student history and forward the application for further processing"
+    },
+    {
+      "id": "06",
+      "type": "process_step",
+      "actor": "Programme Director",
+      "action": "Define the cohort or semester in which the student should continue after the academic leave",
+      "deadline": "Maximum 2 working days"
+    },
+    {
+      "id": "07",
+      "type": "process_step",
+      "actor": "LVM",
+      "action": "Define the examination regulation and subject semester",
+      "deadline": "Maximum 2 working days"
+    },
+    {
+      "id": "08a",
+      "type": "process_step",
+      "actor": "Fee Management",
+      "action": "Cancel the fees during the academic leave semester and clarify special cases with Student Service if there are open items",
+      "deadline": "Maximum 2 working days"
+    },
+    {
+      "id": "08b",
+      "type": "process_step",
+      "actor": "Student Service",
+      "action": "Clarify special cases with Fee Management"
+    },
+    {
+      "id": "09",
+      "type": "process_step",
+      "actor": "Student Service",
+      "action": "Inform the student and relevant services about the approval and store the application in the student file",
+      "deadline": "Immediately"
+    },
+    {
+      "id": "10",
+      "type": "process_step",
+      "actor": "Student Service",
+      "action": "Set the booking status in AC5 to 'beurlaubt'",
+      "deadline": "Last week before the academic leave semester"
+    },
+    {
+      "id": "11",
+      "type": "process_step",
+      "actor": "LVM",
+      "action": "Ask the student to contact LVM before returning from academic leave so they can be placed in the correct planning group"
+    },
+    {
+      "id": "12",
+      "type": "process_step",
+      "actor": "Examination Office / CSD / Center for Languages",
+      "action": "Check whether further system changes are needed, such as deregistration from resit exams, interruption of funding status, or deregistration from language courses",
+      "deadline": "Immediately"
+    },
+    {
+      "id": "end_rejected",
+      "type": "end",
+      "actor": "Student Service",
+      "action": "Process ends because the application was rejected"
+    },
+    {
+      "id": "output",
+      "type": "output",
+      "actor": "Student Service",
+      "action": "Completed academic leave application and updated student status"
+    }
+  ],
+
+  "edges": [
+    {
+      "from": "input",
+      "to": "01",
+      "condition": "Student wants to apply for academic leave"
+    },
+    {
+      "from": "01",
+      "to": "02",
+      "condition": "Application and proof submitted"
+    },
+    {
+      "from": "02",
+      "to": "D01",
+      "condition": "Formal check completed"
+    },
+    {
+      "from": "D01",
+      "to": "03a",
+      "condition": "No - proof is missing, incorrect, or additional information is required"
+    },
+    {
+      "from": "03a",
+      "to": "03b",
+      "condition": "Student is asked to revise the application"
+    },
+    {
+      "from": "03b",
+      "to": "02",
+      "condition": "Revised application is submitted again"
+    },
+    {
+      "from": "D01",
+      "to": "D02",
+      "condition": "Yes - proof is correct and complete"
+    },
+    {
+      "from": "D02",
+      "to": "04",
+      "condition": "No - application is not approved"
+    },
+    {
+      "from": "04",
+      "to": "end_rejected",
+      "condition": "Student has been informed about rejection"
+    },
+    {
+      "from": "D02",
+      "to": "05",
+      "condition": "Yes - application is approved"
+    },
+    {
+      "from": "05",
+      "to": "06",
+      "condition": "Application is forwarded to Programme Director"
+    },
+    {
+      "from": "06",
+      "to": "07",
+      "condition": "Cohort or continuation semester is defined"
+    },
+    {
+      "from": "07",
+      "to": "08a",
+      "condition": "Examination regulation and subject semester are defined"
+    },
+    {
+      "from": "08a",
+      "to": "08b",
+      "condition": "Special fee case or open item exists"
+    },
+    {
+      "from": "08b",
+      "to": "09",
+      "condition": "Special case clarified"
+    },
+    {
+      "from": "08a",
+      "to": "09",
+      "condition": "No special fee clarification needed"
+    },
+    {
+      "from": "09",
+      "to": "10",
+      "condition": "Approval information sent and application stored"
+    },
+    {
+      "from": "09",
+      "to": "11",
+      "condition": "LVM must support return from academic leave"
+    },
+    {
+      "from": "09",
+      "to": "12",
+      "condition": "Other services must check system changes"
+    },
+    {
+      "from": "10",
+      "to": "output",
+      "condition": "Booking status updated in AC5"
+    },
+    {
+      "from": "11",
+      "to": "output",
+      "condition": "Return planning information handled"
+    },
+    {
+      "from": "12",
+      "to": "output",
+      "condition": "Additional service changes checked"
+    }
+  ]
+}
