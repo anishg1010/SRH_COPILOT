@@ -1,1 +1,0 @@
-University AI CO-PILOT
