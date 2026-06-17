@@ -1,0 +1,8 @@
+paths:
+  raw_data: data/raw
+  processed_data: data/processed
+  metadata: data/metadata
+  vector_db: data/vector_db/chroma
+  document_registry: data/metadata/document_registry.json
+  category_schema: data/metadata/category_schema.yaml
+  agent_registry: data/metadata/agent_registry.yaml

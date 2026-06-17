@@ -1,0 +1,19 @@
+app:
+  name: "SRH AI Copilot"
+  default_agent: "linc"
+  default_language: "auto"
+
+retrieval:
+  top_k: 5
+  similarity_threshold: 0.35
+  max_context_chunks: 5
+
+ingestion:
+  chunk_size_words: 500
+  chunk_overlap_words: 75
+  require_human_metadata_review: true
+
+response:
+  show_sources: true
+  show_confidence_label: true
+  require_human_review_when_external: true

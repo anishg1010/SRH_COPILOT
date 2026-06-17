@@ -1,0 +1,62 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Environment variables
+.env
+.env.local
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.vscode/*
+!.vscode/settings.json
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/**/*.log
+logs/ingestion_logs/*
+logs/retrieval_logs/*
+logs/user_feedback/*
+!logs/**/.gitkeep
+
+# Data privacy
+data/raw/**/*.pdf
+data/raw/**/*.docx
+data/raw/**/*.pptx
+data/raw/**/*.xlsx
+data/raw/**/*.csv
+
+# Processed outputs
+data/processed/**/*.jsonl
+data/processed/**/*.json
+!data/processed/**/.gitkeep
+
+# Vector DB
+data/vector_db/chroma/*
+!data/vector_db/chroma/.gitkeep
+
+# Models and caches
+models/
+.cache/
+.cache_huggingface/
+huggingface_cache/
+
+# Local outputs
+outputs/
+tmp/

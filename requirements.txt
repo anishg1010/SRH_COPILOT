@@ -1,0 +1,30 @@
+# Core
+python-dotenv==1.0.1
+PyYAML==6.0.2
+pydantic==2.9.2
+
+# Document processing
+pymupdf==1.24.10
+python-docx==1.1.2
+python-pptx==1.0.2
+
+# Language detection
+langdetect==1.0.9
+
+# Embeddings and vector database
+sentence-transformers==3.1.1
+chromadb==0.5.5
+
+# LLM integration
+ollama==0.3.3
+requests==2.32.3
+
+# Frontend
+streamlit==1.38.0
+
+# Data handling
+pandas==2.2.2
+numpy==1.26.4
+
+# Testing
+pytest==8.3.3

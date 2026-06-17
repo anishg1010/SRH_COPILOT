@@ -1,0 +1,17 @@
+[
+  {
+    "query": "Create competence-oriented learning objectives for a water technology course.",
+    "expected_agent": "linc",
+    "expected_intent": "generate_learning_objectives"
+  },
+  {
+    "query": "Suggest teaching methods for a project-based module.",
+    "expected_agent": "linc",
+    "expected_intent": "suggest_teaching_methods"
+  },
+  {
+    "query": "Create a rubric for assessing student presentations.",
+    "expected_agent": "linc",
+    "expected_intent": "create_rubric"
+  }
+]

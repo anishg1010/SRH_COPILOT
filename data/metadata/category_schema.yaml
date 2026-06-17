@@ -1,0 +1,29 @@
+linc:
+  categories:
+    core_principles:
+      description: "SRH/LINC teaching principles, competence orientation, learning philosophy."
+    policies:
+      description: "Official policies, rules, standards, and governance documents related to teaching."
+    teaching_methods:
+      description: "Teaching strategies, classroom formats, learning activities, and didactic methods."
+    assessment_rubrics:
+      description: "Assessment design, grading criteria, rubrics, evaluation methods, and feedback principles."
+    module_design:
+      description: "Course, module, syllabus, curriculum, and learning path design."
+    responsible_ai:
+      description: "Responsible, ethical, transparent, and pedagogically useful AI integration in teaching."
+    general:
+      description: "Useful LINC material that does not fit another category."
+
+career_support:
+  categories:
+    scholarships:
+      description: "Scholarship applications, requirements, eligibility, recommendation letters, and funding rules."
+    cv_cover_letter:
+      description: "CV, cover letter, job application document support and improvement guidelines."
+    career_events:
+      description: "Workshops, events, career skills sessions, dates, and registration information."
+    data_protection:
+      description: "Consent, privacy, confidential data, and application data handling."
+    general:
+      description: "Career support material that does not fit another category."

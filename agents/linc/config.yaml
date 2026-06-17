@@ -1,0 +1,24 @@
+agent_name: linc
+display_name: "Learning and Innovation Agent"
+collection: linc
+
+users:
+  - lecturers
+
+allowed_categories:
+  - core_principles
+  - policies
+  - teaching_methods
+  - assessment_rubrics
+  - module_design
+  - responsible_ai
+  - general
+
+allowed_tasks:
+  - answer_teaching_question
+  - generate_learning_objectives
+  - design_course
+  - suggest_teaching_methods
+  - create_assessment
+  - create_rubric
+  - suggest_responsible_ai_use

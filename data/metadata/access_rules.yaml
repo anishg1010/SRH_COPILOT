@@ -1,0 +1,23 @@
+access_rules:
+  lecturer:
+    allowed_agents:
+      - linc
+    allowed_collections:
+      - linc
+      - shared
+
+  student:
+    allowed_agents:
+      - career_support
+    allowed_collections:
+      - career_support
+      - shared
+
+  admin:
+    allowed_agents:
+      - linc
+      - career_support
+    allowed_collections:
+      - linc
+      - career_support
+      - shared

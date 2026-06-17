@@ -1,0 +1,43 @@
+agents:
+  linc:
+    name: "Learning and Innovation Agent"
+    users:
+      - lecturers
+    collection: "linc"
+    description: "Supports lecturers with competence-oriented teaching, course design, assessments, rubrics, and responsible AI integration."
+    allowed_categories:
+      - core_principles
+      - policies
+      - teaching_methods
+      - assessment_rubrics
+      - module_design
+      - responsible_ai
+      - general
+    allowed_tasks:
+      - answer_teaching_question
+      - generate_learning_objectives
+      - design_course
+      - suggest_teaching_methods
+      - create_assessment
+      - create_rubric
+      - suggest_responsible_ai_use
+
+  career_support:
+    name: "Career Support Agent"
+    users:
+      - students
+      - career_support_staff
+    collection: "career_support"
+    description: "Supports career guidance, CV and cover letter improvement, scholarships, and consultation preparation."
+    allowed_categories:
+      - scholarships
+      - cv_cover_letter
+      - career_events
+      - data_protection
+      - general
+    allowed_tasks:
+      - answer_career_question
+      - review_cv
+      - review_cover_letter
+      - explain_scholarship_requirements
+      - recommend_career_workshops
